@@ -31,6 +31,7 @@ release = '0.1'
 # ones.
 extensions = [
     'myst_parser',
+    'sphinx_search.extension',
     'sphinx_rtd_theme'
 ]
 
