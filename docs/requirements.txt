@@ -1,3 +1,4 @@
-sphinx==3.4.3
-sphinx_rtd_theme==0.5.1
-readthedocs-sphinx-search==0.1.0rc3
+Sphinx==3.5.4
+sphinx_rtd_theme==0.5.2
+readthedocs-sphinx-search==0.1.0
+myst-parser==0.14.0
