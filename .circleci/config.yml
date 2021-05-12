@@ -12,9 +12,31 @@ jobs:
       - run:
           name: Test
           command: pytest
+  docs-deploy:
+    docker:
+      - image: node:8.10.0
+    steps:
+      - checkout
+      - attach_workspace:
+          at: docs/_build
+      - run:
+          name: Install  and configure dependencies
+          command: |
+            npm install -g --slient gh-pages@2.0.1
+            git config user.email "snehangshu-ci@gmail.com"
+            git config user.name "Snehangshu Karmakar"
+      - add_ssh_keys:
+          fingerprints:
+            - "31:b2:38:71:8b:77:d2:0a:d2:f9:82:8e:b6:53:54:85"
+      - run:
+          name: Deploy docs to gh-pages branch
+          command: gh-pages --dotfiles --message "[skip ci]" --dist docs/_build/html
 
 workflows:
   version: 2
   build:
     jobs:
       - test
+      - docs-deploy:
+          requires:
+            - test
