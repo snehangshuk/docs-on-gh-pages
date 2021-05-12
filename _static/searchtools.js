@@ -517,4 +517,6 @@ var Search = {
   }
 };
 
-/* Search initialization removed for Read the Docs */
+$(document).ready(function() {
+  Search.init();
+});
