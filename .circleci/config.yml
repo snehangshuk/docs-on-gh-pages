@@ -20,7 +20,7 @@ jobs:
       - run:
           name: Install and configure dependencies
           command: |
-            pip install -r docs/requirements.txt
+            python3 -m pip install -r docs/requirements.txt
       - run:
           name: Display conf.py
           command: cat docs/conf.py
