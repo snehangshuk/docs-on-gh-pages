@@ -28,7 +28,10 @@ jobs:
           command: cat docs/conf.py
       - run:
           name: Build
-          command: python3 -m sphinx -T -E -b html -d _build/doctrees -D language=en . _build/html
+          command: |
+            cd docs
+            ls -l docs
+            python3 -m sphinx -T -E -b html -d _build/doctrees -D language=en . _build/html
       - persist_to_workspace:
           root: docs/_build
           paths: html
