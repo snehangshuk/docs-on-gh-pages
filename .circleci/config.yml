@@ -20,15 +20,15 @@ jobs:
       - run:
           name: Install and configure dependencies
           command: |
-            python -m pip install --upgrade --no-cache-dir pip setuptools
-            python -m pip install --upgrade --no-cache-dir mock==1.0.1 pillow==5.4.1 alabaster>=0.7,<0.8,!=0.7.5 commonmark==0.8.1 recommonmark==0.5.0 sphinx sphinx-rtd-theme readthedocs-sphinx-ext<2.2
-            python -m pip install --exists-action=w --no-cache-dir -r docs/requirements.txt
+            python3 -m pip install --upgrade --no-cache-dir pip setuptools
+            python3 -m pip install --upgrade --no-cache-dir mock==1.0.1 pillow==5.4.1 alabaster>=0.7,<0.8,!=0.7.5 commonmark==0.8.1 recommonmark==0.5.0 sphinx sphinx-rtd-theme readthedocs-sphinx-ext<2.2
+            python3 -m pip install --exists-action=w --no-cache-dir -r docs/requirements.txt
       - run:
           name: Display conf.py
           command: cat docs/conf.py
       - run:
           name: Build
-          command: python -m sphinx -T -E -b html -d _build/doctrees -D language=en . _build/html
+          command: python3 -m sphinx -T -E -b html -d _build/doctrees -D language=en . _build/html
       - persist_to_workspace:
           root: docs/_build
           paths: html
