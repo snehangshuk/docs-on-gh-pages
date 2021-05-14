@@ -10,7 +10,7 @@ Welcome to mylib's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-
+    sample
 
 Indices and tables
 ==================
