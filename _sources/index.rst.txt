@@ -9,12 +9,7 @@ Welcome to mylib's documentation!
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+   :hidden:
+   :titlesonly:
 
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   sample
