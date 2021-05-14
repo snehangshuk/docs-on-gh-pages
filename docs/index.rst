@@ -9,8 +9,10 @@ Welcome to mylib's documentation!
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+   :hidden:
+   :titlesonly:
 
-    sample
+   sample
 
 Indices and tables
 ==================
