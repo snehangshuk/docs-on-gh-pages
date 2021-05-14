@@ -10,7 +10,6 @@ Welcome to mylib's documentation!
    :maxdepth: 2
    :caption: Contents:
    :hidden:
-   :numbered: 3
    :titlesonly:
 
    sample
